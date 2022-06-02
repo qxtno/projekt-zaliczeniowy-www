@@ -22,11 +22,11 @@ async function displayNames() {
 }
 
 async function getNames() {
-    return (await fetch("http://localhost:8080/api/names")).json();
+    return (await fetch("https://projekt-zaliczeniowy-www.herokuapp.com/api/names")).json();
 }
 
 async function getTeams(name) {
-    const response = await fetch(`http://localhost:8080/api/team?name=${name}`);
+    const response = await fetch(`https://projekt-zaliczeniowy-www.herokuapp.com/api/team?name=${name}`);
     const infoResponse = await response.json()
 
     const infoContent = document.getElementById("info_content")
